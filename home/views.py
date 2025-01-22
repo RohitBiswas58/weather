@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 
 def home(request):
     city = request.GET.get('city', 'Dum Dum')
-    api_key = 'd693f3dff6835e58b520256bf4e64afc'
+    api_key = ''
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}'
     try:
         data = requests.get(url).json()
